@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevated Services</title>
+    <link href="./styles/index.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="./scripts/index.js"></script>
+    <div id="card-main">
+        <div id="card-main_text">
+            <h1 class="center-text text1">Elevated Services</h1>
+            <h4 class="center-text text3">Our Reputation is Spotless</h4>
+            <div class="inline-text" style="padding-top: 20vh;">
+                <h3 id="main-link_residential" class="text2 inline-text_ul">Residential</h3>
+                <h3 class="text2">|</h3>
+                <h3 id="main-link_marine" class="text2 inline-text_ul">Marine</h3>
+                <h3 class="text2">|</h3>
+                <h3 id="main-link_auto" class="text2 inline-text_ul">Auto</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        var scroll_anim_delay = 400;
+
+        function windowResize(){
+            const platform = navigator.userAgent;
+            let deviceType = "desktop";
+
+            if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(platform)) {
+                deviceType = "tablet";
+            }
+            else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(platform)) {
+                deviceType = "mobile";
+            }
+
+            if(window.innerWidth < 600 || deviceType === "mobile"){
+                scroll_anim_delay = 400;
+            }
+            else{
+                scroll_anim_delay = 0;
+                /*
+                document.getElementById("main-link_residential").onmouseleave = function(){
+                    card_main.style.backgroundImage = "url(https://img.freepik.com/premium-photo/top-view-abstract-paper-texture-background_225709-2718.jpg)"
+                };
+                document.getElementById("main-link_marine").onmouseleave = function(){
+                    card_main.style.backgroundImage = "url(https://img.freepik.com/premium-photo/top-view-abstract-paper-texture-background_225709-2718.jpg)";
+                };
+                document.getElementById("main-link_auto").onmouseleave = function(){
+                    card_main.style.backgroundImage = "url(https://img.freepik.com/premium-photo/top-view-abstract-paper-texture-background_225709-2718.jpg)";
+                };*/
+            }
+        }
+
+        window.onload = () => {
+            windowResize();
+        }
+
+        window.addEventListener("resize", windowResize, true);
+
+        var card_main = document.getElementById("card-main");
+        document.getElementById("main-link_residential").onmouseover = function(){
+            card_main.style.backgroundImage = "url(https://www.stantec.com/content/dam/stantec/images/stock/other/0001/design-visualization.jpg)"
+        };
+        document.getElementById("main-link_residential").onclick = function(){
+            setTimeout(function() {
+                window.location.href="#card-residential";
+            }, scroll_anim_delay);
+        };
+        document.getElementById("main-link_marine").onmouseover = function(){
+            card_main.style.backgroundImage = "url(https://iqboatlifts.com/wp-content/uploads/2018/06/Yacht-vs-Boat-Whats-the-Difference-Between-the-Two-1024x571.jpg)";
+        };
+        document.getElementById("main-link_marine").onclick = function(){
+            setTimeout(function() {
+                window.location.href="#card-marine";
+            }, scroll_anim_delay);
+        };
+        document.getElementById("main-link_auto").onmouseover = function(){
+            card_main.style.backgroundImage = "url(https://www.theglobeandmail.com/resizer/gew4suGzG44SaHLq5yXVIoEY3Qc=/arc-anglerfish-tgam-prod-tgam/public/2XCT3JN7ZRGMNAFSMZM2RSTH2I.jpeg)";
+        };
+        document.getElementById("main-link_auto").onclick = function(){
+            setTimeout(function() {
+                window.location.href="#card-auto";
+            }, scroll_anim_delay);
+        };
+    </script>
+    <div id="card-residential">
+        <h1>Residential</h1>
+    </div>
+    <div id="card-marine">
+        <h1>Marine</h1>
+    </div>
+    <div id="card-auto">
+        <h1>Auto</h1>
+    </div>
+</body>
+</html>
