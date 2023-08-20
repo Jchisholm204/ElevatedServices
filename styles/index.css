@@ -4,8 +4,7 @@
 }
 #card-main {
     background-color: white;
-    background-image: url("https://img.freepik.com/premium-photo/top-view-abstract-paper-texture-background_225709-2718.jpg?w=2000");
-    width: 100%;
+    background-image: url("../assets/FFFFFF.png");
     height: 100%;
     justify-content: center;
     transition:  ease-in-out 700ms;

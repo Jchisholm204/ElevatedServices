@@ -71,7 +71,7 @@
 
         var card_main = document.getElementById("card-main");
         document.getElementById("main-link_residential").onmouseover = function(){
-            card_main.style.backgroundImage = "url(https://www.stantec.com/content/dam/stantec/images/stock/other/0001/design-visualization.jpg)"
+            card_main.style.backgroundImage = "url('./assets/FFFFFF.png')";
         };
         document.getElementById("main-link_residential").onclick = function(){
             setTimeout(function() {
@@ -79,7 +79,7 @@
             }, scroll_anim_delay);
         };
         document.getElementById("main-link_marine").onmouseover = function(){
-            card_main.style.backgroundImage = "url(https://iqboatlifts.com/wp-content/uploads/2018/06/Yacht-vs-Boat-Whats-the-Difference-Between-the-Two-1024x571.jpg)";
+            card_main.style.backgroundImage = "url('./assets/marine/IMG_5594.jpg')";
         };
         document.getElementById("main-link_marine").onclick = function(){
             setTimeout(function() {
@@ -87,7 +87,7 @@
             }, scroll_anim_delay);
         };
         document.getElementById("main-link_auto").onmouseover = function(){
-            card_main.style.backgroundImage = "url(https://www.theglobeandmail.com/resizer/gew4suGzG44SaHLq5yXVIoEY3Qc=/arc-anglerfish-tgam-prod-tgam/public/2XCT3JN7ZRGMNAFSMZM2RSTH2I.jpeg)";
+            card_main.style.backgroundImage = "url('./assets/auto/IMG_2325.jpg')";
         };
         document.getElementById("main-link_auto").onclick = function(){
             setTimeout(function() {
@@ -97,13 +97,22 @@
     </script>
     <div id="card-residential">
         <h1>Residential</h1>
-        <p>Outdoor home cleaning services</p>
+        <p>Professional outdoor home cleaning services</p>
         <p>Contact for a quotes</p>
         <h3>Contact</h3>
     </div>
     <div id="card-marine">
-        <h1>Marine</h1>
-        <p>Specializing in Marine dealing & Ceramic Coating</p>
+        <div class="card_toptext">
+            <h1>Marine</h1>
+            <p>Specializing in Marine dealing & Ceramic Coating</p>
+        </div>
+        <ul class="album-ul">
+            <li class="album-li">Ceramic Coating</li>
+            <li class="album-li">Top Wash</li>
+            <li class="album-li">Full Wash</li>
+            <li class="album-li">Detailing</li>
+            <li class="album-li">Wax & Polish</li>
+        </ul>
         <p>Contact for a quotes</p>
         <h3>Contact</h3>
     </div>
