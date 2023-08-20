@@ -20,8 +20,113 @@
             </div>
         </div>
     </div>
+    <div id="card-residential">
+        <div>
+        <div class="subcard-text">
+        <img class="img-logo" src="./assets/logo.png">
+        <h1>Residential</h1>
+        </div>
+        <div class="subcard-description">
+            <p>Professional outdoor home cleaning services.</p>
+        </div>
+        <p class="subcard-centraltext" id="residential-info"></p>
+        </div>
+        <div class="subcard-contact">
+            <p>Contact for a quotes</p>
+            <div class="subcard-contact_link">
+                <h3>Contact</h3>
+            </div>
+        </div>
+    </div>
+    <div id="card-marine">
+        <div>
+            <div class="subcard-text">
+                <img class="img-logo" src="./assets/logo.png">
+                <h1>Marine</h1>
+            </div>
+            <div class="subcard-description">
+                <p style="color: white;">Specializing in Marine dealing & Ceramic Coating</p>
+            </div>
+        </div>
+        <p class="subcard-centraltext" id="marine-info">Wax & Polish starting at $25 per foot</p>
+        <div class="subcard-contact">
+            <p style="color: white;">Contact for a quotes</p>
+            <div class="subcard-contact_link">
+                <h3>Contact</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        //marine slideshow
+        const images = [    "url(./assets/marine/IMG_0871.jpg)",
+                            "url(./assets/marine/IMG_1094.jpg)",
+                            "url(./assets/marine/IMG_1183.jpg)",
+                            "url(./assets/marine/IMG_5595.jpg)",
+                            "url(./assets/marine/IMG_2371.jpg)"];
+        const infos  = [    "Weekly Washes and Spot Cleans",
+                            "Top washes starting at $60 an hour",
+                            "Wax & Polish @ $25 / foot",
+                            "Marine Grade Ceramic Coating",
+                            "Interior and Exterior Detailing"];
+        let bg   = document.getElementById("card-marine");
+        let info = document.getElementById("marine-info");
+
+        let count = 0;
+
+        (function changebg(){
+            info.classList.add('hide');
+            setTimeout(function () {
+                info.innerHTML = infos[count];
+                info.classList.remove('hide');
+            }, 600);
+            bg.style.backgroundImage = images[count];
+            //info.innerHTML = infos[count];
+            if(count < 4){
+                count += 1;
+            }
+            else{
+                count = 0;
+            }
+            setTimeout(changebg, 8000);
+        })();
+    </script>
+    <div id="card-auto">
+        <h1>Auto</h1>
+        <p>Fine automotive dealing & Ceramic Coating</p>
+        <p>Contact for a quotes</p>
+        <h3>Contact</h3>
+    </div>
+    <p class="subcard-centraltext" id="residential-info"></p>
+    <div id="card-contact">
+        <h1>Cole Des Lauriers</h1>
+        <p>Principal</p>
+
+        <p>778-903-2134</p>
+        <p>coledeslauriers@icloud.com</p>
+        <h1>Elevated Services</h1>
+        <div class="inline-text">
+            <h3 class="text2 inline-text_ul">Residential</h3>
+            <h3 class="text2">|</h3>
+            <h3 class="text2 inline-text_ul">Marine</h3>
+            <h3 class="text2">|</h3>
+            <h3 class="text2 inline-text_ul">Auto</h3>
+        </div>
+        
+    </div>
     <script>
         var scroll_anim_delay = 400;
+        let subcard_description = document.getElementsByClassName("subcard-description");
+
+        let contactbuttons = document.getElementsByClassName("subcard-contact_link");
+        for (let index = 0; index < contactbuttons.length; index++) {
+            contactbuttons[index].onclick = function (){
+            setTimeout(function() {
+                window.location.href="#card-contact";
+            }, scroll_anim_delay);
+        }
+            
+        }
+        
 
         function windowResize(){
             const platform = navigator.userAgent;
@@ -36,6 +141,12 @@
 
             if(window.innerWidth < 600 || deviceType === "mobile"){
                 scroll_anim_delay = 400;
+                if(deviceType != "mobile"){
+                for (let index = 0; index < subcard_description.length; index++) {
+                    subcard_description[index].style.width = "90%";
+                    
+                }
+            }
             }
             else{
                 scroll_anim_delay = 0;
@@ -49,6 +160,10 @@
                 document.getElementById("main-link_auto").onmouseleave = function(){
                     card_main.style.backgroundImage = "url(https://img.freepik.com/premium-photo/top-view-abstract-paper-texture-background_225709-2718.jpg)";
                 };*/
+                for (let index = 0; index < subcard_description.length; index++) {
+                    subcard_description[index].style.width = "60%";
+                    
+                }
             }
             const card_main_text = document.getElementById("card-main_text");
 
@@ -95,48 +210,5 @@
             }, scroll_anim_delay);
         };
     </script>
-    <div id="card-residential">
-        <h1>Residential</h1>
-        <p>Professional outdoor home cleaning services</p>
-        <p>Contact for a quotes</p>
-        <h3>Contact</h3>
-    </div>
-    <div id="card-marine">
-        <div class="card_toptext">
-            <h1>Marine</h1>
-            <p>Specializing in Marine dealing & Ceramic Coating</p>
-        </div>
-        <ul class="album-ul">
-            <li class="album-li">Ceramic Coating</li>
-            <li class="album-li">Top Wash</li>
-            <li class="album-li">Full Wash</li>
-            <li class="album-li">Detailing</li>
-            <li class="album-li">Wax & Polish</li>
-        </ul>
-        <p>Contact for a quotes</p>
-        <h3>Contact</h3>
-    </div>
-    <div id="card-auto">
-        <h1>Auto</h1>
-        <p>Fine automotive dealing & Ceramic Coating</p>
-        <p>Contact for a quotes</p>
-        <h3>Contact</h3>
-    </div>
-    <div id="card-contact">
-        <h1>Cole Des Lauriers</h1>
-        <p>Principal</p>
-
-        <p>778-903-2134</p>
-        <p>coledeslauriers@icloud.com</p>
-        <h1>Elevated Services</h1>
-        <div class="inline-text">
-            <h3 class="text2 inline-text_ul">Residential</h3>
-            <h3 class="text2">|</h3>
-            <h3 class="text2 inline-text_ul">Marine</h3>
-            <h3 class="text2">|</h3>
-            <h3 class="text2 inline-text_ul">Auto</h3>
-        </div>
-        
-    </div>
 </body>
 </html>

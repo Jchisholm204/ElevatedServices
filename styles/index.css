@@ -2,6 +2,11 @@
     margin: 0px;
     scroll-behavior: smooth;
 }
+
+.img-logo{
+    max-width: 80px;
+    max-height: auto;
+}
 #card-main {
     background-color: white;
     background-image: url("../assets/FFFFFF.png");
@@ -21,6 +26,70 @@
     margin: auto;
 }
 
+.subcard-text{
+    padding-top: 10vh;
+    width: 90%;
+    justify-self: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: baseline;
+}
+
+.subcard-text h1{
+    
+    padding: 8%;
+    padding-left: 14px;
+    font-size: 50px;
+}
+
+.subcard-description{
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    justify-content: left;
+    width: 60%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.subcard-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20vh;
+    margin-right: 16%;
+    text-align: left;
+}
+
+.subcard-centraltext{
+    margin: auto;
+    padding-top: 10vh;
+    padding-left: 20vw;
+    transition: ease-in-out 200ms;
+    color: white;
+    font-size: 20px;
+    opacity: 1;
+    transition: ease-in-out 700ms;
+}
+.hide {
+    opacity: 0 !important;
+}
+
+.subcard-contact_link{
+    text-align: center;
+    background-color: rgb(122.5, 98, 30.5);
+    padding: 4px;
+    margin: 4px;
+    border-radius: 4px;
+    color: black;
+}
+
 .center-text{
     width: 100%;
     text-align: center;
@@ -31,6 +100,13 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.inline-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: baseline;
 }
 
 .inline-text_ul{
@@ -60,22 +136,41 @@ a{
 }
 
 #card-residential {
-    background-color: orchid;
+    background-image: url("../assets/FFFFFF.png");
     width: 100%;
     height: 100%;
     justify-content: center;
+    transition:  ease-in-out 700ms;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 #card-marine {
-    background-color: red;
+    background-image: none;
+    background-color: blue;
     width: 100%;
     height: 100%;
     justify-content: center;
+    transition:  ease-in-out 1200ms;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 #card-auto {
     background-color: purple;
     width: 100%;
     height: 100%;
     justify-content: center;
+    transition:  ease-in-out 700ms;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #card-contact {
