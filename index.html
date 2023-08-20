@@ -7,7 +7,6 @@
     <link href="./styles/index.css" rel="stylesheet" />
 </head>
 <body>
-    <script src="./scripts/index.js"></script>
     <div id="card-main">
         <div id="card-main_text">
             <h1 class="center-text text1">Elevated Services</h1>
@@ -50,6 +49,17 @@
                 document.getElementById("main-link_auto").onmouseleave = function(){
                     card_main.style.backgroundImage = "url(https://img.freepik.com/premium-photo/top-view-abstract-paper-texture-background_225709-2718.jpg)";
                 };*/
+            }
+            const card_main_text = document.getElementById("card-main_text");
+
+            if(window.innerWidth < 600 || deviceType === "mobile"){
+                card_main_text.style.width = "100%";
+            }
+            else if(window.innerWidth < 900){
+                card_main_text.style.width = "80%";
+            }
+            else{
+                card_main_text.style.width = "60%";
             }
         }
 
