@@ -286,7 +286,15 @@
                             "#card-marine",
                             "#card-auto",
                             "#card-contact"];
-        window.onwheel = function(e){
+
+        window.ontouchmove = ()=>{
+            $(window).trigger("onwheel");
+        }
+
+        window.onwheel = (e) =>{sk(e)};
+        window.ontouchmove = (e) => {sk(e)}
+
+        function sk(e){
             if(scroll_timeout > 700){
                 if(e.deltaY >= 0){
                     // Scrolling Down with mouse
