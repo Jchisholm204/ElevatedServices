@@ -287,7 +287,7 @@
                             "#card-auto",
                             "#card-contact"];
         window.onwheel = function(e){
-            if(scroll_timeout > 400){
+            if(scroll_timeout > 700){
                 if(e.deltaY >= 0){
                     // Scrolling Down with mouse
                     console.log('Scroll Down');
@@ -310,8 +310,8 @@
             }
         }
         setInterval(function(){
-            scroll_timeout += 1;
-        }, 1);
+            scroll_timeout += 10;
+        }, 10);
     </script>
     <footer>&copy;jchisholm204 | CDL 2023</footer>
 </body>
