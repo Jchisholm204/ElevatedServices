@@ -59,45 +59,86 @@
     </div>
     <script>
         //marine slideshow
-        const images = [    "url(./assets/marine/IMG_0871.jpg)",
+        const marine_images = [    "url(./assets/marine/IMG_0871.jpg)",
                             "url(./assets/marine/IMG_1094.jpg)",
                             "url(./assets/marine/IMG_1183.jpg)",
                             "url(./assets/marine/IMG_5595.jpg)",
                             "url(./assets/marine/IMG_2371.jpg)"];
-        const infos  = [    "Weekly Washes and Spot Cleans",
+        const marine_infos  = [    "Weekly Washes and Spot Cleans",
                             "Top washes starting at $60 an hour",
                             "Wax & Polish @ $25 / foot",
                             "Marine Grade Ceramic Coating",
                             "Interior and Exterior Detailing"];
-        let bg   = document.getElementById("card-marine");
-        let info = document.getElementById("marine-info");
+        let marine_bg   = document.getElementById("card-marine");
+        let marine_info = document.getElementById("marine-info");
 
-        let count = 0;
+        let marine_count = 0;
 
-        (function changebg(){
-            info.classList.add('hide');
+        (function marine_changebg(){
+            marine_info.classList.add('hide');
             setTimeout(function () {
-                info.innerHTML = infos[count];
-                info.classList.remove('hide');
+                marine_info.innerHTML = marine_infos[marine_count];
+                marine_info.classList.remove('hide');
             }, 600);
-            bg.style.backgroundImage = images[count];
+            marine_bg.style.backgroundImage = marine_images[marine_count];
             //info.innerHTML = infos[count];
-            if(count < 4){
-                count += 1;
+            if(marine_count < marine_images.length -1){
+                marine_count += 1;
             }
             else{
-                count = 0;
+                marine_count = 0;
             }
-            setTimeout(changebg, 8000);
+            setTimeout(marine_changebg, 8000);
         })();
     </script>
     <div id="card-auto">
-        <h1>Auto</h1>
-        <p>Fine automotive detailing & Ceramic Coating</p>
-        <p>Contact for a quotes</p>
-        <h3>Contact</h3>
+        <div>
+            <div class="subcard-text">
+                <img class="img-logo" src="./assets/logo.png">
+                <h1>Auto</h1>
+            </div>
+            <div class="subcard-description">
+                <p style="color: white;">Fine Automotive Detailing</p>
+            </div>
+        </div>
+        <p class="subcard-centraltext" id="auto-info"></p>
+        <div class="subcard-contact">
+            <p style="color: white;">Contact for a quotes</p>
+            <div class="subcard-contact_link">
+                <h3>Contact</h3>
+            </div>
+        </div>
     </div>
-    <p class="subcard-centraltext" id="residential-info"></p>
+    <script>
+        //auto slideshow
+        const auto_images = [   "url(./assets/auto/11141B2B-.jpg)",
+                                "url(./assets/auto/IMG_2324.jpg)",
+                                "url(./assets/auto/IMG_2325.jpg)"];
+        const auto_infos  = [   "Full Interior & Exterior Detailing",
+                                "Wash & Wax",
+                                "Ceramic Coating"];
+        let auto_bg   = document.getElementById("card-auto");
+        let auto_info = document.getElementById("auto-info");
+
+        let auto_count = 0;
+
+        (function auto_changebg(){
+            auto_info.classList.add('hide');
+            setTimeout(function () {
+                auto_info.innerHTML = auto_infos[auto_count];
+                auto_info.classList.remove('hide');
+            }, 600);
+            auto_bg.style.backgroundImage = auto_images[auto_count];
+            //info.innerHTML = infos[count];
+            if(auto_count < auto_images.length - 1){
+                auto_count += 1;
+            }
+            else{
+                auto_count = 0;
+            }
+            setTimeout(auto_changebg, 8000);
+        })();
+    </script>
     <div id="card-contact">
         <h1>Cole Des Lauriers</h1>
         <p>Principal</p>
