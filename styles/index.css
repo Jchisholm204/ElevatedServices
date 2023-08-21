@@ -18,9 +18,11 @@
 }
 
 #card-main_text{
-    padding-top: 30vh;
+    padding-top: 20vh;
     width: 60%;
     max-width: 500px;
+    display: flex;
+    flex-flow: column wrap;
     justify-content: center;
     justify-self: center;
     margin: auto;
@@ -122,12 +124,12 @@
 
 .text1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(245, 196, 61);
+    color: black;/*rgb(245, 196, 61);*/
     font-size: 60px;
 }
 
 .text3{
-    color: rgb(245, 196, 61);
+    color: black;/*rgb(245, 196, 61);*/
 }
 
 a{
