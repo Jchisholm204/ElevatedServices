@@ -16,7 +16,7 @@
 
   gtag('config', 'G-RF183RGL9W');
 </script>
-<body id="body" style="overflow-y: hidden;" scroll="no">
+<body>
     <div id="card-main">
         <div id="card-main_text">
             <img src="./assets/logo.png" style="align-self: center; height: 10vh;">
@@ -278,48 +278,48 @@
             }, scroll_anim_delay);
         };
         
-        let body = document.getElementById("body");
-        let scroll_timeout = 500;
-        let curlocation = 0;
-        const locations = [ "#card-main",
-                            "#card-residential",
-                            "#card-marine",
-                            "#card-auto",
-                            "#card-contact"];
+        // let body = document.getElementById("body");
+        // let scroll_timeout = 500;
+        // let curlocation = 0;
+        // const locations = [ "#card-main",
+        //                     "#card-residential",
+        //                     "#card-marine",
+        //                     "#card-auto",
+        //                     "#card-contact"];
 
-        window.ontouchmove = ()=>{
-            $(window).trigger("onwheel");
-        }
+        // window.ontouchmove = ()=>{
+        //     $(window).trigger("onwheel");
+        // }
 
-        window.onwheel = (e) =>{sk(e)};
-        window.ontouchmove = (e) => {sk(e)}
+        // window.onwheel = (e) =>{sk(e)};
+        // window.ontouchmove = (e) => {sk(e)}
 
-        function sk(e){
-            if(scroll_timeout > 700){
-                if(e.deltaY >= 0){
-                    // Scrolling Down with mouse
-                    console.log('Scroll Down');
-                    console.log(curlocation);
-                    curlocation += 1;
-                } else {
-                    // Scrolling Up with mouse
-                    console.log('Scroll Up');
-                    console.log(curlocation);
-                    curlocation -= 1;
-                }
-                if(curlocation < 0){
-                    curlocation = 0;
-                }
-                if(curlocation > locations.length -1){
-                    curlocation = locations.length -1;
-                }
-                window.location.href = locations[curlocation];
-            }
-            scroll_timeout = 0;
-        }
-        setInterval(function(){
-            scroll_timeout += 10;
-        }, 10);
+        // function sk(e){
+        //     if(scroll_timeout > 700){
+        //         if(e.deltaY >= 0){
+        //             // Scrolling Down with mouse
+        //             console.log('Scroll Down');
+        //             console.log(curlocation);
+        //             curlocation += 1;
+        //         } else {
+        //             // Scrolling Up with mouse
+        //             console.log('Scroll Up');
+        //             console.log(curlocation);
+        //             curlocation -= 1;
+        //         }
+        //         if(curlocation < 0){
+        //             curlocation = 0;
+        //         }
+        //         if(curlocation > locations.length -1){
+        //             curlocation = locations.length -1;
+        //         }
+        //         window.location.href = locations[curlocation];
+        //     }
+        //     scroll_timeout = 0;
+        // }
+        // setInterval(function(){
+        //     scroll_timeout += 10;
+        // }, 10);
     </script>
     <footer>&copy;jchisholm204 | CDL 2023</footer>
 </body>
