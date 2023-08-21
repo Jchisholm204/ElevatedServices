@@ -6,7 +6,6 @@
     <title>Elevated Services</title>
     <link rel="shortcut icon" href="./assets/logo.png">
     <link href="./styles/index.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF183RGL9W"></script>
@@ -287,21 +286,17 @@
                             "#card-marine",
                             "#card-auto",
                             "#card-contact"];
-        $(document).on('touchmove', function() {
-            $(document).trigger('mousewheel');
-        });
         window.onwheel = function(e){
-            //console.log(e.deltaY);
             if(scroll_timeout > 700){
                 if(e.deltaY >= 0){
                     // Scrolling Down with mouse
-                    //console.log('Scroll Down');
-                    //console.log(curlocation);
+                    console.log('Scroll Down');
+                    console.log(curlocation);
                     curlocation += 1;
                 } else {
                     // Scrolling Up with mouse
-                    //console.log('Scroll Up');
-                    //console.log(curlocation);
+                    console.log('Scroll Up');
+                    console.log(curlocation);
                     curlocation -= 1;
                 }
                 if(curlocation < 0){
@@ -316,7 +311,6 @@
         }
         setInterval(function(){
             scroll_timeout += 10;
-            //console.log(scroll_timeout);
         }, 10);
     </script>
     <footer>&copy;jchisholm204 | CDL 2023</footer>
